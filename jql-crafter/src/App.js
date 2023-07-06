@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import TextareaDisabled from './components/TextareaDisabled';
 
 function App() {
-  const [text, setText] = useState();
+  const [text, setText] = useState("");
 
   function handleTextState(newText) {
     setText(newText);
