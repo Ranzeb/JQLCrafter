@@ -14,16 +14,38 @@ function App() {
 
   return (
     <div className="App">
-
-      <div className='flex w-full'>
-        <Textarea
-          setText={handleTextState}
-        />
-        <TextareaDisabled
-          text={text}
-        />
+      <div>
+        <h1 className="mt-10 text-4xl font-bold tracking-tight text-black sm:text-6xl">
+          Generate Jira Query Language (JQL)
+        </h1>
+        <p className="mt-6 text-lg leading-8 text-black-300">
+          Describe the JQL query that you need below
+        </p>
       </div>
-    </div>
+      <div className='flex w-full'>
+        <div className='block w-full'>
+          <div>
+            <h1 className="text-lg text-left px-20 font-bold tracking-tight text-black sm:text-lg">
+              Your description
+            </h1>
+          </div>
+          <Textarea
+            setText={handleTextState}
+          />
+        </div>
+        <div className='block w-full'>
+          <div>
+            <h1 className="text-lg text-left px-20 font-bold tracking-tight text-black sm:text-lg">
+              Your JQL query
+            </h1>
+          </div>
+
+          <TextareaDisabled
+            text={text}
+          />
+        </div>
+      </div>
+    </div >
   );
 }
 
