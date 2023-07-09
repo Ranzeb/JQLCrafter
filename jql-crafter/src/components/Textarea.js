@@ -7,8 +7,9 @@ export default function Textarea({ setText }) {
     const { Configuration, OpenAIApi } = require("openai");
 
     function generateJQL(prompt) {
+        console.log(process.env)
         const configuration = new Configuration({
-            apiKey: process.env.OPENAI_API_KEY
+            apiKey: process.env.REACT_APP_OPENAI_API_KEY
         });
 
         console.log("conf: ", process.env.OPENAI_API_KEY)
